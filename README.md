@@ -3,7 +3,7 @@
 - Javascript temelleri başlangıç
 - Nodejs temelleri
 - Express JS 
-- Diğer kavramlar ( Templata engine (ejs,pug) , Modüller...)
+- Diğer kavramlar ( Template engine (ejs,pug) , Modüller...)
 - ...
 - ..
 - .
