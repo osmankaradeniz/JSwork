@@ -1,0 +1,18 @@
+MVC deseni / pattern nedir ?
+
+    M       V        C
+  Model    View   Controller
+
+> yapısında olan ve uygulamayı bölümlere ayıran
+ve uygulama büyüdüğünde bile hiyerarşisi sayesinde
+geliştirme sürecinde karmaşıklığı önleyerek ilerlememizi
+sağlamaktadır.
+
+
+                           Model <-> DB
+                             | 
+gelen istek -> routing -> Controller
+                             |
+dönen yanıt  <-  HTML   <-  View 
+
+

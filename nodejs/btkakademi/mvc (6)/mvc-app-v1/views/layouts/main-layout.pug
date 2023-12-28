@@ -1,0 +1,21 @@
+<!doctype html>
+html(lang="en")
+  
+  include ../includes/head.pug
+
+  body 
+        include ../includes/nav.pug
+
+        div.container.pt-100
+            div.row
+
+                include ../includes/menu.pug
+
+                div.col-lg-9
+
+                    block content
+
+
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js")

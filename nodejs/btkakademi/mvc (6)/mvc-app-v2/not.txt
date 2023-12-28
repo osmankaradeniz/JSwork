@@ -1,0 +1,25 @@
+npm init --yes
+npm install express
+
+
+formdan gelen verileri yönetmek için
+expressjs'te bir middleware eklemek gerek
+ve bunu yönetmek için   "body-parser" 
+modulunu kullanıyoruz ;
+> npm install body-parser@1.18.3 
+
+
+template engine olarak pug kullandık
+> npm install pug@2.0.3
+
+
+
+shift+tab geri boşluk
+tab ileri boşluk
+kod satırlarında toplu seçimde
+
+pug değişkenlere
+property içinde 
+( `${}`) erişirken
+dışında metin biçiminde olan kısımlarda
+#{} şeklinde erişiyoruz
