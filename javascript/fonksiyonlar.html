@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+ <meta charset="UTF-8">
+ <title> Javascript'e giriş </title>
+  
+    
+</head>
+
+<body>
+    
+    <script>
+        
+        /*
+        function topla(a,b){
+            return a+b;
+        }
+        
+        var sonuc = topla(20,30);
+        
+        console.log(sonuc);
+        */
+        /*
+        
+        var now=2023;
+        
+        function yashesapla(yas){
+            return now-yas;
+        }
+        
+        var ahmet= yashesapla(1990);
+        var ali= yashesapla(1996);
+        
+        console.log(ahmet);
+        console.log(ali);
+        
+        function emeklilikhesapla(ad,yas){
+            var k_yas = yashesapla(yas);
+            var emeklilik = 65 - k_yas;
+            
+            if(emeklilik<=0)
+                console.log(Math.abs(emeklilik)+ " yıl önce emekli olmuşsunuz !");
+            else{
+                console.log(ad + ' '+ emeklilik+ ' sene sonra emekli olabilir.');
+            }
+        }
+        
+        emeklilikhesapla('çınar',1940);
+        */
+        // fonksiyonlar gereksiz tekrarları önlemek 
+        // ve daha işlevsel yapılar elde etmek için
+        // kullanabiliriz.
+        // paramtere ve dönüş durumu.
+        
+        /*
+        function tekCift(sayi){
+            
+            if(sayi%2==0){
+                console.log("Çift sayı");
+            }
+            else{
+                console.log("Tek sayı");
+            }
+            
+        }
+        
+        function faktoriyel(sayi){
+            faktoriyel_deger=1;
+            
+            for(var i=1;i<=sayi;i++){
+            faktoriyel_deger=faktoriyel_deger*i;    
+            }
+            
+            return faktoriyel_deger;
+        }
+        
+        function diziYaz(dizi){
+            
+            dizi.forEach(function(element){
+                console.log(element);                
+            });
+        }
+        
+    
+        tekCift(5);
+        tekCift(6);
+        
+        console.log(faktoriyel(1 );
+        
+        diziYaz(["osman","ahmet"]);
+        
+        
+        */
+        
+        // SUMMARİZE FONKSİYON
+         // ÖZETLEME FONKSİYONU
+        
+        // bir cümle içinden istenilen karakter sayısına göre bir
+        // özet çıkarılsın , ancak bölünecek nokta bir kelime
+        // olamaz.
+        
+        
+        
+        var product ={
+            
+            name:"Samsung",
+            price : 3000,
+            description:'Lorem ipsum dolar sit amet, consectetur adipisicing elit. Dolorum, non.',
+            summary:function(){
+                    var ozetCumle=[];
+                    var maxKarakter=20;
+                    var cumle=this.description;
+
+                if(maxKarakter>=cumle.length){
+                   this.shortDescription=cumle;
+                }
+                else{
+                    // bu yöntem ile özet çıkartmak istediğimizde
+                    // bazı kelimelern cümleden eksik şekilde almakta
+                    // olduğu için bu yöntemi pas geçiyoruz.
+                    /*
+                    var ozet = cumle.substring(0,maxKrakter);
+                    */
+
+                    var kelimeler = cumle.split(' ');
+
+                    var toplamKarakter = 0;
+
+                    for( var i=0; i<kelimeler.length;i++){
+                        ozetCumle.push(kelimeler[i]);
+                        toplamKarakter+=kelimeler[i].length;
+
+                        if(toplamKarakter>=maxKarakter)
+                            break;
+                    }
+
+                }
+
+               this.shortDescription = ozetCumle.join(' ')+'...';
+            }
+        }
+        
+        
+        // object içerisinde tanımlamış olduğumuz
+        // fonksiyon bize object içinde yeni
+        // nitelikler kazandırmamızı
+        // ayrıca object içerisindeki nitelikleri 
+        // işleyebilmemizi sağlamaktadır.
+        
+        product.summary();
+        console.log(product);
+        
+        
+        /*
+        var cumle=";
+        function ozet(cumle,maxKarakter){
+            
+            
+        }
+        
+        
+        console.log(ozet(cumle,71));
+        
+        */
+        
+        
+        
+        
+        
+        
+    
+        
+    </script>
+</body>
+
+</html>

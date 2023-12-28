@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+ <meta charset="UTF-8">
+ <title> Javascript'e giriş </title>
+  
+    
+</head>
+
+<body>
+    
+    
+    <h1 id="title">SA</h1>
+    <h3 id="sub-title">ve as.</h3>
+    
+    <button id="changeText">Change</button>
+    
+    <p>deneme </p>
+    
+    
+    <ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    </ul>
+    
+    
+    <script>
+        var btn= document.querySelector('#changeText');
+        var p = document.querySelector('p');
+        
+        btn.addEventListener('click',function(){
+           //console.log("button tıklandı!"); 
+           p.textContent="button tıklandı";
+               
+        });
+        
+        var h1 = document.querySelector('h1');
+        /*
+        h1.addEventListener('click',function(){
+            h1.style.color="red";
+        });
+        */
+        
+        h1.addEventListener('click',changeColor);
+        
+        function changeColor(){
+            h1.style.color="red";
+        }
+        
+
+        
+        /*
+        var ul = document.querySelector('ul');
+        
+        ul.addEventListener('click',function(){
+            console.log("ul tıklandı!");
+        });*/
+        
+        var li = document.querySelectorAll('li');
+        li.forEach(function(element,index){
+            element.addEventListener('click',function(){
+                alert("icerik : "+element.textContent+" indis:"+index);     
+                element.style.color="blue";
+            });
+        });
+        
+        
+
+        
+    </script>
+    
+</body>
+
+</html>

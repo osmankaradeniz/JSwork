@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+ <meta charset="UTF-8">
+ <title> Javascript'e giriş </title>
+  
+    
+</head>
+
+<body>
+    
+  <script>
+    var marka1="Opel";
+    var marka2="Toyata";
+    //....
+      
+    //aynı tipte ve amaçtaki verileri dizide saklayabiliriz.
+    
+    var marka=["Opel","Toyota","Mazda","Renault"];
+    var model= new Array("Corsa","Yaris","CX-3","Clio");
+    console.log(marka);
+    console.log(model);
+      
+    //diziler indis ile tutulur.
+    console.log(marka[0]);
+    marka[0]="Porsche";
+    console.log(marka[0]);
+      
+    var auiris =["Toyota","Auris",42,true];
+    auiris.push('blue');  //DİZİ SONUNA EKLE
+    auiris.unshift('HB'); //DİZİ BAŞINA EKLE
+    console.log(auiris);
+    console.log(auiris.pop()); // DİZİ SONUNDAKİ VERİYİ SİL VE YAZ
+    auiris.shift();// DİZİ BAŞINDAKİ VERİYİ SİL VE YAZ
+    console.log(auiris);
+      
+    for(i=0; i<=marka.length;i++){
+        console.log(marka[i]);
+    }
+    
+    //dizi içerisinde ilgili elemanın ilk hangi indiste olduğunu
+    // olup olmadığını inceleyebilmek için "indexOf" metodunu 
+    // dizilerde kullanabiliriz.
+    if(marka.indexOf("Mazda")!==-1){
+        console.log(marka[marka.indexOf("Mazda")]);
+    }
+    
+    var now =  2018;
+    var models= ['Toyota','Mazda','Mercedes','Opel'];
+    var years = ['2015','2012','2016','2014'];
+    
+      
+    /*
+    //for ile dizi yazdırma.
+    for( var i =0;i<models.length;i++){
+        console.log(models[i]);
+    }
+      
+    // foreach yöntemi ile dizi yazdırma
+    models.forEach(function(element){
+        console.log(element);
+    });
+    */
+      
+      
+    //araçların yaş bilgisi ile yazdır.
+      /*
+    for( var i=0; i<model.length;i++){
+        console.log(model[i]+" "+years[i]+' model ve '+ (now-years[i]) +' yaşında bir araçtır.');
+    }
+      */
+      
+      
+    //kullanıcıdan veri alarak diziye eklemek
+    var model = prompt("model giriniz :");
+    var year= prompt("model yılını giriniz :");
+    //dizinin sonuna veri ekledik kullanıcıdan alıp.
+    models.push(model);
+    years.push(year);
+      
+    for( var i=0; i<models.length;i++){
+        console.log(models[i]+" "+years[i]+' model ve '+ (now-years[i]) +' yaşında bir araçtır.');
+    }
+    
+      
+    
+  </script>
+
+    
+</body>
+</html>

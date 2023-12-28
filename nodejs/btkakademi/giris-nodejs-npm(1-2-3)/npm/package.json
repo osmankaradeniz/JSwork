@@ -1,0 +1,22 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "npm.js",
+  "scripts": {
+    "start": "nodemon npm.js",
+    "start-server": "node npm.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "webpack": "^5.89.0"
+  }
+}

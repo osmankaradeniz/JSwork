@@ -1,0 +1,46 @@
+NPM notları ;
+npm -v
+> https://www.npmjs.com/
+
+yardımcı kütüphane
+underscore
+
+uygulama geliştirme aşamasında kullandığımız
+işimiz bittiğinde kullanacağımız paketleri
+npm i webpack --save-dev  
+--save-dev şeklinde belirtiyoruz.
+
+her proje'de kullanabilmek için ise
+npm i live-server -g
+-g (--global) : flagı ile çalıştırmalıyız.
+
+npm list
+npm list -g (global paketler)
+npm list -g --depth 0 (üst paketler)
+
+version : 4.25.1
+     major.minor.patch
+
+
+npm init --yes (package.json)
+node package manager kuruyourz.
+
+
+package.json'da scriptler
+alanında oluşturduğumuz exec komutlarını
+tetiklemek için ;
+> npm script_adı
+örn ; 
+package.json {
+"scripts":{
+     "start":"node app.js",
+     "start-server":"node npm.js"
+  }
+}
+
+cli : > npm start
+bazen script isimlerine özel scriptler çakışabiliyor
+bu sebeple
+cli: > npm run script_name
+şeklinde koşturmak gerek.
+yani ;  npm run start-server

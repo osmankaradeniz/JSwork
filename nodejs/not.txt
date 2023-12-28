@@ -1,0 +1,24 @@
+nodeJS nedir?
+
+node.js bir derleyicidir.(compiler)
+node.js javascript programlama dilini kullanır.
+
+javascript kullanıcı tarayıcısında client tarafında çalışırken.
+-db bağlantısı için servis gerekir.
+
+node.js backend-server side tarafında uygulama geliştirebilmemizi sağlar.
+-veritabanına direkt bağlantı yapılabilir.
+
+
+programlama dili -> derleyici -> çıktı #hata kodu
+
+
+
+-----------------------------------------------------------
+express js:
+
+express kütüphanesini içeri al
+app oluştur
+app dinle
+
+routing oluştur.

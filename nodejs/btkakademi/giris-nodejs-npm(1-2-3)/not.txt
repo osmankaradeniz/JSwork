@@ -1,0 +1,39 @@
+cntrl + k + c  = comment  
+cntrl + k + u  = decomment
+
+node -v
+
+> npm i -g live-server
+otomatik çıktı alabilmek için server üzerinde 
+kodların çalışmasını sağlayan paket.
+global seviyede kuruyoruz / spesifik sadece bir projeye
+yönelik olarak hareket etmiyoruz.
+
+
+Global değişkenler :
+2 farklı js dosyasındaki kodlarda ilk js dosyasında yapılan tanımlama
+ve diğer dosya içerisinde ekrana yazdırma durumunda ilgili değişken değeri
+ekrana yazılacaktır. windows object içerisinde global olarak tutulur tanımlanan var.
+window objesi tarayıcı tarafında nodejs server tarafında ise "global" değişkeni üzerinden 
+hareket edeceğiz.
+yalnız global object'i direk kullanamıyoruz bunun için "module" kavramına ihtiyaç duyuyoruz.
+
+
+MODÜL ÇEŞİTLERİ ;
+
+custom module : (scriptA , scriptB) gibi düşün (kişiselleştirilmiş modüller)
+node module   : node modülleri (nodejs birlikte yapıya entegre gelen modüller) 
+> bu eğitimde FİLE SYSTEM (FS) , PATH , OS , EVENTS , HTTP modüllerini kullanacağız.
+3rd Part module : npm aracılığı ile firmalar , geliştiriciler diğer kişiler tarafından oluşturulan modüller. (express.js)
+
+
+HTTP request ve response işlemlerinde
+protokole uygun şekilde gerçekleştirmek
+gerekmektedir.
+
+
+ // alt +96 veya altgr+(virgül)
+//backtik yazmanı sağlar.
+`` , ``
+
+

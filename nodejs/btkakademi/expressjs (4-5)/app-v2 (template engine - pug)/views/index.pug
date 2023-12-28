@@ -1,0 +1,42 @@
+extends layouts/main-layout.pug
+
+block content
+        div(data-bs-ride="carousel").carousel.slide#mySlider
+
+            div.carousel-indicators
+                button(type="button" data-bs-target="#mySlider" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1").active
+                button(type="button" data-bs-target="#mySlider" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2")
+                button(type="button" data-bs-target="#mySlider" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3")
+            
+            div.carousel-inner
+
+                div.carousel-item.active
+                    img(src="./img/slider1.jpg" alt="1").d-block.w-100
+                div.carousel-item
+                    img(src="./img/slider2.jpg" alt="2").d-block.w-100
+                div.carousel-item
+                    img(src="./img/slider3.jpg" alt="3").d-block.w-100
+                
+                button( type="button" data-bs-target="#mySlider" data-bs-slide="prev").carousel-control-prev
+                    span(aria-hidden="true").carousel-control-prev-icon
+                    span.visually-hidden Previous
+                
+                button(type="button" data-bs-target="#mySlider" data-bs-slide="next").carousel-control-next 
+                    span(aria-hidden="true").carousel-control-next-icon 
+                    span.visually-hidden Next
+            
+        div.row
+            each product in products 
+                    div.col-md-4
+                        div.card.my-3
+                            img(src=`./img/${product.image}` alt="").card-img-top
+                            div.card-body
+                                h4.card-title
+                                    a(href="#").Product #{product.name}
+                                p.card-text.pt-2 #{product.description}
+                            div.card-footer
+                                small.text-muted
+                                    i.fas.fa-lira-sign #{product.price}
+                                
+                                a(href="#").btn.btn-secondary.btn-sm.float-end
+                                    i.fa.fa-angles-right Details

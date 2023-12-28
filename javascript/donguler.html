@@ -1,0 +1,99 @@
+<html><!DOCTYPE html>
+<html lang="en" >
+<head>
+ <meta charset="UTF-8">
+ <title> Javascript'e giriş </title>
+  
+    
+</head>
+
+<body>
+    
+    <script>
+        
+        /*
+        for(var i=0;i<100;i++){
+            
+            
+            if(i==50){continue;}
+            if(i%2==0){console.log("çift sayı :"+i)}
+            //if(i==50){break;}
+             
+        }
+        
+        var sehirler =["kocaeli","aydın","istanbul","hatay"];
+        */
+        
+        /*
+        
+        
+        for( var i=0; i<sehirler.length;i++){
+            console.log(sehirler[i]);
+        }
+        */
+        
+        
+        var i=0;
+        /*
+        while(i<=10){
+            console.log(i);
+            i++;
+        }
+        */
+        
+        /*
+        while(i<sehirler.length)
+        {
+            console.log(sehirler[i]);
+            i++;
+        }
+        */
+        
+        
+        //10-100 arası sayıları yaz
+        /*for(var i=10;i<100;i++){
+            console.log(i);
+        }*/
+        
+        //10-100 arası sayıları 5-er 5-er yazdır while
+        /*var i=10;
+        while(i<=100){
+            console.log(i);
+            i=i+5;
+        }*/
+        
+        var giris_yapildi= false;
+       //giris_yapildi==false
+       while(!giris_yapildi){
+       
+        var k_ad = prompt("K.ad giriniz :");
+        var passwd = prompt("passwd giriniz");
+        
+        if(k_ad==="guest" && passwd==="12345"){
+         console.log("giriş başarılı");
+         giris_yapildi=true;
+        }
+        else
+        {
+         console.log("giriş başarısız");
+        }
+       
+       }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+</body>
+
+</html>

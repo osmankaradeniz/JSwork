@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+ <meta charset="UTF-8">
+ <title> Javascript'e giriş </title>
+  
+    
+</head>
+
+<body>
+    
+    <!--
+    <script>
+    
+    /*
+    var marka=['opel','toyota','mazda'];
+    var model=['corsa','yaris','CX-3'];
+    var yil  =['2015','2012','2016'];
+    
+    console.log(marka[0]+' '+model[0]+' '+yil[0]);
+    
+    var opel=['Opel','Corsa','2015'];
+    
+    console.log(opel);
+    */
+        
+    //OBJELER
+    // {} içinde tanımlanır.
+    // k,v şeklinde
+        
+    var opel ={
+        marka:'Opel',
+        model:'Corsa',
+        yil: '2015',
+        renk:'mavi',
+        otomatik:'true'
+    };
+    
+    //console.log(opel);
+    //console.log(opel.marka);
+    //console.log(opel['renk']);    
+        
+    var toyota = new Object();
+    toyota.marka='Toyota';
+    toyota.model='Yaris';
+    toyota.yil='2012';
+    toyota.renk='kırmızı';
+    toyota.otomatik=true;
+    
+    //console.log(toyota);
+        
+    toyota.model='auris';
+    
+    /*   
+    var arabalar = [opel,toyota];
+    arabalar.forEach(function(element){
+        console.log(element);
+    });
+    */
+    
+    var arabalar = [
+      {  
+        marka:'Opel',
+        model:'Corsa',
+        yil: '2015',
+        renk:'mavi',
+        otomatik:'true'
+      },
+      {  
+        marka:'Mazda',
+        model:'CX-3',
+        yil: '2017',
+        renk:'mavi',
+        otomatik:'true'
+      }
+    ];
+        
+    console.log(arabalar);
+    //console.log(arabalar[0].model);
+    
+    for(var i =0;i<arabalar.length;i++) 
+    {
+        /*if(arabalar[i].yil=='2017'){
+            console.log(arabalar[i].model);
+        }*/
+        console.log(arabalar[i].marka);
+    }
+        
+        
+    // dizilerin her bir elemanına döngü ile ulaşıp
+    // herbir döngü içerisindeki elemana ulaştıktan sonra
+    // o elemanında içerisindeki özelliklere ulaşabiliriz.
+        
+    
+    </script>
+-->
+    
+    <script>
+        
+        var person={
+            ad:"ali",
+            soyad:"yılmaz",
+            cinsiyet:"erkek",
+            telefon:"02623333333",
+            adres:"izmit kocaeli",
+            melek:"bilgisayar mühendisi",
+            diller:"ingilizce,almanca",
+            hobiler:["sinema","spor","kitap okumak"]
+        }
+        
+       /*
+        console.log("bildiği dil sayısı :"+person.diller.split(',').length);
+        
+        person.hobiler.forEach(function(hobi){
+        //console.log(person.hobiler.indexOf(hobi)); 
+        //console.log(hobi.indexOf('k')); 
+           console.log(hobi);
+        });
+        */
+        
+        var personeller=[
+            {
+            ad:"ali",
+            soyad:"yılmaz",
+            cinsiyet:"erkek",
+            telefon:"02623333333",
+            adres:"izmit kocaeli",
+            melek:"bilgisayar mühendisi",
+            diller:"ingilizce,almanca",
+            hobiler:["sinema","spor","kitap okumak"]
+        },
+            {
+            ad:"ahmet",
+            soyad:"ozturk",
+            cinsiyet:"erkek",
+            telefon:"02623333333",
+            adres:"izmit kocaeli",
+            melek:"elektrik mühendisi",
+            diller:"ingilizce,almanca",
+            hobiler:["sinema","spor","kitap okumak"]
+        },
+            {
+            ad:"mehmet",
+            soyad:"karadeniz",
+            cinsiyet:"erkek",
+            telefon:"02623333333",
+            adres:"izmit kocaeli",
+            melek:"müdür mühendisi",
+            diller:"ingilizce,almanca",
+            hobiler:["koşu","kitap okumak"]
+        },
+            {
+            ad:"osman",
+            soyad:"karadeniz",
+            cinsiyet:"erkek",
+            telefon:"02623333333",
+            adres:"izmit kocaeli",
+            melek:"müdür mühendisi",
+            diller:"ingilizce,almanca",
+            hobiler:["koşu"]
+        }
+            
+        ]
+        
+       /* 
+        console.log("personel sayısı :"+personeller.length);
+        
+        personeller.forEach(function(personel){
+            console.log("*****************")
+            
+            console.log(personel.ad+' '+personel.soyad);
+            
+            personel.hobiler.forEach(function(hobi){
+                console.log(personel.hobiler.indexOf(hobi)+" indisli hobi :"+hobi);
+            });
+            
+        });
+        */
+        
+        //personellerin ortak hobi alanlarını bulan kodu yaz.
+        /*
+        
+        // kendi çözümüm 
+        var ortakHobiler;
+        var bakilanlar=[];
+        
+        personeller.forEach(function(personel){
+           
+            personeller.forEach(function(altPersonel){
+                
+                if( 
+                    (altPersonel.ad==personel.ad && altPersonel.soyad==personel.soyad)
+                   
+                    || 
+                   
+                   bakilanlar.indexOf(personel.ad+' '+personel.soyad +','+altPersonel.ad + ' ' +altPersonel.soyad )>0
+                   )   
+                 {return;}
+                
+                
+                bakilanlar.push(altPersonel.ad + ' ' +altPersonel.soyad + ',' +personel.ad+' '+personel.soyad);
+                
+                
+                
+                console.log("*****************************");
+            
+                console.log(personel.ad+" "+personel.soyad);
+            
+                console.log(altPersonel.ad + " " + altPersonel.soyad);
+                
+                //iki dizi arasında kesişim
+                // iki personelin ortak hobileri
+                ortakHobiler = personel.hobiler.filter(element=> altPersonel.hobiler.includes(element));
+                
+                if(ortakHobiler.length!=0){
+                    console.log("personellerinin ortak hobileri:")
+                console.log(ortakHobiler);
+                }
+                else{
+                console.log("personellerin ortak hobisi bulunmamaktadır!");
+                }
+                
+                
+            
+                
+            });
+            
+            
+            
+            
+        });
+        
+        console.log(bakilanlar);
+         */
+        
+        /*
+        
+        //gpt3 çözüm
+        
+function findOrtakHobiler(personel1, personel2) {
+    return personel1.hobiler.filter(hobi => personel2.hobiler.includes(hobi));
+}
+
+var bakilanlar = [];
+
+for (var i = 0; i < personeller.length; i++) {
+    for (var j = i + 1; j < personeller.length; j++) {
+        var personel1 = personeller[i];
+        var personel2 = personeller[j];
+
+        var key = personel1.ad + ' ' + personel1.soyad + ',' + personel2.ad + ' ' + personel2.soyad;
+        if (bakilanlar.includes(key)) {
+            continue;
+        }
+
+        bakilanlar.push(key);
+
+        console.log("*****************************");
+        console.log(personel1.ad + " " + personel1.soyad);
+        console.log(personel2.ad + " " + personel2.soyad);
+
+        var ortakHobiler = findOrtakHobiler(personel1, personel2);
+
+        if (ortakHobiler.length !== 0) {
+            console.log("Personellerinin ortak hobileri:");
+            console.log(ortakHobiler);
+        } else {
+            console.log("Personellerin ortak hobisi bulunmamaktadır!");
+        }
+    }
+}
+
+console.log(bakilanlar);
+*/
+        
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+package.json 
+projemin hangi bağımlılıklarını içerdiğini içeren dosya.
+> npm init --yes
+ile elde edebiliriz.
+
+#i veya install 
+
+express.js kurmak için 
+node package manager ile
+> npm i express@4.18.1
+kurduktan sonra otomatik package.json geliyor.
+
+silinirse node_modules'te
+> npm install 
+diyerek package.json üzerinden bağımlılıkları indirir.
+
+
+her seferinde değişiklik sonrsaı uygulamayı durdur başlat 
+yapmamak için ;
+> npm install nodemon -g 
+# nodemon dosya_isim.js
+bu şekilde kullanarak ilgili dosyada değişiklik oldukça
+otomatik olarak yeniden başlayan yapıyı elde ederiz.
+
+-g : global (bilgisayara yükler tüm uygulamalarda geçer.)
+
+projenin paketleri 
+> npm list
+
+global - biligsayardaki paketler ;
+> npm list -g
+
+
+
+
+
+
+
+
+
+
+
+
+
