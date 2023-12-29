@@ -1,0 +1,23 @@
+div(data-bs-ride="carousel").carousel.slide#mySlider
+
+            div.carousel-indicators
+                button(type="button" data-bs-target="#mySlider" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1").active
+                button(type="button" data-bs-target="#mySlider" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2")
+                button(type="button" data-bs-target="#mySlider" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3")
+            
+            div.carousel-inner
+
+                div.carousel-item.active
+                    img(src="/img/slider1.jpg" alt="1").d-block.w-100
+                div.carousel-item
+                    img(src="/img/slider2.jpg" alt="2").d-block.w-100
+                div.carousel-item
+                    img(src="/img/slider3.jpg" alt="3").d-block.w-100
+                
+                button( type="button" data-bs-target="#mySlider" data-bs-slide="prev").carousel-control-prev
+                    span(aria-hidden="true").carousel-control-prev-icon
+                    span.visually-hidden Previous
+                
+                button(type="button" data-bs-target="#mySlider" data-bs-slide="next").carousel-control-next 
+                    span(aria-hidden="true").carousel-control-next-icon 
+                    span.visually-hidden Next
