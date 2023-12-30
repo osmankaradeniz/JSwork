@@ -11,6 +11,16 @@ connection.connect(function(err){
       return;
    }  
    console.log("Mysql bağlantısı başarılı");
+ 
 });
+
+/*
+connection.promise().execute('select * from products')
+      .then((result)=>{
+         console.log(result);
+      }).catch((err)=>{
+         console.log(err);
+      });
+*/
 
 module.exports=connection.promise();

@@ -1,0 +1,66 @@
+
+
+
+Database  -> controller -> view
+                |
+              MODEL
+               |
+    static çalışmalarda veriyi MEMORY( ram )'de tuttuk.
+    diğer yöntemler , 
+            FİLE SYSTEM-> produsct.json
+                          products.xml
+                          products.xls
+            SQL   -> MySql , MsSql
+            NOSQL -> MongoDb
+
+
+Application -> Mysql (server url)
+
+
+
+RELATİONSHİPS
+(ilişkiler)
+
+1-one to many
+2-one to one
+3-many to many
+
+
+
+
+mysql bağlantısı için gereken modül
+mysql2
+
+>npm install mysql2@1.6.4
+
+
+npm list --depth=0
+npm list -g
+npm list
+
+
+NOT ->
+bir nesneyi oluştururken
+o nesne içinde ilgili kurucu niteliklerini
+her birini tanımlamadan oluşturabiliriz
+ancak bu neticede o nesnenin varsa o niteliklerini
+default değerler ile işlemesi yok ise undefined şeklinde
+tanımlamasına neden olacaktır
+bu durumda veritabanına ilgili nesneden bir nitelik/alan için
+bilgiyi alıp kayıt oluşturacağımız , sorgulayacağımız ...
+noktada eğer ilgili tablodaki field/sütun 
+boş girdiyi kabul etmeyen bir yapıdaysa veya
+
+
+NOT->
+mysql2 tarafında database/table sorguları için;
+connection.execute
+connection.query
+kullandığımız execute prepared bir yapıda çalışmakta yani tekrar işlenebilir bir yapıda.
+taslak sorgu gibi düşünebiliriz.
+
+
+herhangi bir konfigrasyon olmaksızın; 
+sql sorgusu sonrasında gelen veri dizisinde birçok farklı object vardır ve [0]' indisinde 
+ilgili tablo verilerinin kayıtlarını verir.
+[0][0]' ilk kaydı verir
