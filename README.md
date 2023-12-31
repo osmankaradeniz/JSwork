@@ -4,7 +4,7 @@
 - Nodejs temelleri
 - Express JS 
 - Diğer kavramlar ( Template engine (ejs,pug) , Modüller...)
-- Database (SQL,Mysql,...)
+- Database (SQL,Mysql,ORM (sequelize) )
 - ..
 - .
 
