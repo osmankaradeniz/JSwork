@@ -1,0 +1,31 @@
+ORM ( OBJECT RELATİONAL MAPPİNG ) nedir ? 
+
+model ve database arasında iletişimi sağlar.
+MODEL   <->  ORM  <-> Database
+
+ORM (Object-Relational Mapping), programlama dilindeki nesne modelini ilişkisel veritabanıyla ilişkilendiren bir tasarım tekniğidir. Bu, programcıların SQL sorguları yazmadan veritabanıyla etkileşimde bulunmalarını sağlar.
+ 
+
+Sequelize nedir ?
+bir ORM kütüphanesidir sql yapısını kullanmaktadır.
+sql sözcüklerini otonomlaştırmamızı sağlayan bir yapı.
+
+Sequelize, JavaScript tabanlı bir ORM kütüphanesidir. PostgreSQL, MySQL gibi veritabanlarıyla uyumlu olarak çalışır. Sequelize, veritabanı tablolarını temsil eden modeller tanımlamanıza ve SQL sorgularını otomatik olarak oluşturmanıza yardımcı olur. Bu sayede programlama süreci daha okunabilir ve yönetilebilir hale gelir.
+
+
+sequelize kurulumu ;
+npm install sequelize --save
+
+hangi database'e bağlanacak isek o 
+database teknolojisine ait modülü dahil etmemiz gerek.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+.pt-100{
+    padding-top: 100px;
+}
+
+#mySlider { 
+    max-height: 365px; /* Slider'ın maksimum yüksekliği */
+    max-width: 100%;
+    overflow: hidden; /* Taşan içeriği gizle */
+  }
+ 
+
+.carousel-item img { 
+   object-fit: cover;
+ }
