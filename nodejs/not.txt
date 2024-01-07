@@ -22,3 +22,5 @@ app oluştur
 app dinle
 
 routing oluştur.
+
+-
